@@ -1,6 +1,6 @@
 /* Variables */
 :root {
-    --background-color: #226688;
+    --background-color: #2C2668;
     --base-link-color: #ffffff;
     --primary-color: #8C8BDA;
     --secondary-color: #000000; /* Updated secondary color to black */
@@ -12,7 +12,25 @@
 /* Fonts */
 body {
     font-family: var(--font-primary, 'Roboto', sans-serif); /* Added a default font */
+    font-family: var(--font-secondary, 'Outfit', sans-serif);
 }
+
+
+
+
+/* Base Element Styles */
+body {
+    background: var(--background-color);
+    color: white;
+    font: var(--base-font-size, 16px) / 1.6 var(--font-primary);
+}
+
+
+h1,h2,h3,h4,h5,h6 {
+    font-family: var(--font-secondary);
+    text-transform: capitalize;
+}
+
 
 a {
     font-family: var(--font-secondary, 'Outfit', sans-serif);
@@ -24,16 +42,9 @@ a:hover {
     text-decoration: underline;
 }
 
-/* Base Element Styles */
-body {
-    background: var(--background-color);
-    color: white;
-    font: var(--base-font-size, 16px) / 1.6 var(--font-primary);
-    text-transform: capitalize;
-}
 
 /* Layout Styles */
-.container {
+main {
     max-width: 1440px;
     margin: 0 auto;
 }
@@ -42,7 +53,7 @@ body {
 header {
     display: flex;
     align-items: center;
-    line-height: 1.25;
+    line-height: 4rem;
     font-size: 1.25rem;
     margin-right: auto;
 }
@@ -63,7 +74,8 @@ header {
 }
 
 /* Section Styles */
-section {
+
+.hero {
     display: flex;
     justify-content: space-between;
     background: var(--background-color) url(../images/computer.png) no-repeat;
@@ -71,7 +83,7 @@ section {
     font: 2rem / 1.6 var(--font-primary);
 }
 
-h1 {
+.hero h1 {
     margin-top: 5rem;
     width: 35rem;
 }
@@ -93,8 +105,8 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    margin-top: 1rem;
-    margin-bottom: 1em;
+    margin-top: 10rem;
+    margin-bottom: 10em;
 }
 
 .text-container h2 {
@@ -107,6 +119,11 @@ footer {
     justify-content: space-between;
     align-items: center;
     width: 100%;
+}
+
+.image-container img {
+    max-width: 100%;
+    height: auto;
 }
 
 /* Hero Section Styles */
@@ -139,7 +156,7 @@ footer {
 }
 
 .hero-content {
-    width: 5rem;
+    width: 50rem;
 }
 
 /* Ready Section Styles */
@@ -148,8 +165,8 @@ footer {
     height: 25rem;
     background-color: var(--primary-color);
     border-radius: 50px;
-    margin-top: 18rem;
-    margin-bottom: 1em;
+    margin-top: 10rem;
+    margin-bottom: 10em;
     align-items: center;
 }
 
@@ -179,15 +196,15 @@ footer {
 }
 
 .hero_center .hero-content h1,
-.hero_center .hero-content h2 {
+.hero-content h2 {
     font-size: 2.5rem;
     margin-bottom: 10px;
 }
 
 .hero_center .hero-content p,
 .hero-content p {
-    font-size: 1.5rem;
-    margin-bottom: 2px;
+    font-size: 1.25rem;
+    margin-bottom: 20px;
 }
 
 /* Hero Section Styles */
@@ -261,10 +278,10 @@ footer {
 }
 
 .testimonial h2 {
-  margin-top: 4rem;
+  margin-top: 4res;
 }
 
-.testimonials-header {
+.testimonials-header p {
   font-size: 1.25rem;
   color: #777;
 }
@@ -278,7 +295,7 @@ footer {
 }
 
 .testimonial {
-  border: 1px solid #ccc;
+  border: 1px solid grey;
   border-radius: 5px;
   padding: 20px;
   box-sizing: border-box;
@@ -322,11 +339,11 @@ a.pill-link:hover {
 
 /* Alt Pill Link Styles */
 a.alt-pill-link {
-  border: 1px solid #89bb1;
+  border: #89beb1 1px solid;
   background-color: none;
   border-radius: 25px;
   padding: 15px 20px;
-  border: 2px solid #589801;
+  border: 2px solid #89beb1;
   background: rgba(161, 214, 214, 0.6);
 }
 
@@ -345,6 +362,15 @@ a.alt-pill-link {
   .sub-text {
     width: 80%;
   }
+
+  footer{
+    flex-direction: column;
+  }
+
+  .column {
+    margin-bottom: 20px;
+  }
+  
 }
 
 @media screen and (max-width: 768px) {
@@ -352,6 +378,9 @@ a.alt-pill-link {
     flex-direction: column;
     align-items: center;
     gap: 10px;
+  }
+
+  .hero {
     background-image: none;
   }
 
@@ -367,6 +396,11 @@ a.alt-pill-link {
     background-image: none;
   }
 
+  .testimonial-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
   .testimonial {
     margin-top: 5rem;
     flex-basis: 100%;
@@ -374,11 +408,15 @@ a.alt-pill-link {
 }
 
 @media screen and (max-width: 488px) {
-  .hero {
+  main {
     padding: 0 20px;
   }
 
   .hero h1 {
     font-size: calc(var(--h1-font-size) + 0.4);
+  }
+
+  .sub-text {
+    width: 100%;
   }
 }
