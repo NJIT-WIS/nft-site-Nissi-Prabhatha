@@ -96,3 +96,36 @@ header {
 .sub-text {
     width: 5rem;
 }
+/* Footer Styles */
+footer {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 7rem;
+    margin-top: 5rem;
+}
+
+/* Featured Section Styles */
+.featured {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 10rem;
+    margin-bottom: 10em;
+}
+
+.text-container h2 {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.image-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.image-container img {
+    max-width: 100%;
+    height: auto;
+}
