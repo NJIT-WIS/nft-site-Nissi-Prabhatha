@@ -51,6 +51,7 @@ header {
   align-items: center;
   line-height: 4rem;
   font-size: 1.25rem;
+  /*margin-right: auto; */
 }
 
 .logo {
