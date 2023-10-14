@@ -83,7 +83,6 @@ header {
   background-position: right;
   background-repeat: no-repeat;
   justify-content: space-between;
-  /*text-align: right;*/
   height: 473px;
   font: 2rem / 1.6 var(--font-primary);
 }
