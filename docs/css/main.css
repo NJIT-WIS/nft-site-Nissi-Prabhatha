@@ -228,3 +228,46 @@ footer {
 .hero-content a:hover {
   background-color: var(--accent-color);
 }
+
+/* Form Styles */
+.column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .column form {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  
+  .column form input[type="email"] {
+    flex-grow: 1;
+    padding: 10px;
+    border-radius: 6px;
+    border: none;
+  }
+  
+  .column form input[type="submit"] {
+    background-color: var(--primary-color);
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .column form input[type="submit"]:hover {
+    background-color: var(--accent-color);
+  }
+  
+  /* Circular Image Styles */
+  .circular-image {
+    border-radius: 50%;
+    width: 119px;
+    height: 119px;
+  }
